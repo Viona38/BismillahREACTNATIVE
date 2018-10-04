@@ -1,26 +1,16 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
 
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, Image} from 'react-native';
+import { Platform, StatusBar, StyleSheet, Text, View, Image} from 'react-native';
 import Judul from './Component/Judul';
+import Login from './Screens/Login';
 
+type Props = {};
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Judul title="BIODATA"/>
-        <Judul title="LOGIN"/>
-        <Text style={styles.instructions}>Nama    : Viona Resti Ananda </Text>
-        <Text style={styles.instructions}>Kelas   : XI RPL 3 </Text>
-        <Text style={styles.instructions}>No      : 38 </Text>
-        <Image style={{width: 400, height:400}}
-        source={require('./vivi.jpg')}
-        />
-      </View>
+        <Login/>
+        </View>
     );
   }
 }
@@ -29,17 +19,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+    backgroundColor: '#455a64'
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: '#455a64',
     marginBottom: 5,
   },
 });
